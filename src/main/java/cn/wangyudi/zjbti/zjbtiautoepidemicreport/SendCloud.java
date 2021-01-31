@@ -6,6 +6,9 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author abstractprinter
+ */
 public class SendCloud {
     private final String apiUser;
     private final String apiKey;
