@@ -32,7 +32,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cn.wangyudi.zjbti.Main</mainClass>
+                            <mainClass>cn.wangyudi.zjbti.zjbtiautoepidemicreport.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -48,6 +48,11 @@
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.73</version>
         </dependency>
     </dependencies>
 
