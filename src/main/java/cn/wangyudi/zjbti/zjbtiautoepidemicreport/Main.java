@@ -24,7 +24,7 @@ public class Main {
                 Request reportRequest = new Request.Builder()
                         .url("https://wx.app.nbpt.edu.cn/yqtb/weixin/yqtb/submit?date=" + nowDate)
                         .addHeader("Accept", "application/json")
-                        .addHeader("Cookie", "schoolid=6; PHPSESSID=1b774e27244a905e7485b157a736c46a")
+                        .addHeader("Cookie", "schoolid=6; PHPSESSID=80014d899e906ab2663fb3b2397b0bd0")
                         .post(RequestBody.create("dqld=&frks=&dzdq=&jjxhd=&sxqgjx=&jkm=绿码&memo=&geo[longitude]=121.37762451171875&geo[latitude]=28.365718841552734&geo[province]=浙江省&geo[city]=台州市&geo[district]=温岭市&geo[street]=万泉西路"
                                 , MediaType.parse("application/x-www-form-urlencoded; charset=UTF-8")))
                         .build();
