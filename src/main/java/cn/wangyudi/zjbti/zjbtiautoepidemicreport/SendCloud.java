@@ -73,6 +73,7 @@ public class SendCloud {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 System.out.println("Send->" + Objects.requireNonNull(response.body()).string());
+                response.close();
             }
         });
 

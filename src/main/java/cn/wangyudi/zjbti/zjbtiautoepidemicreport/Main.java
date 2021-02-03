@@ -50,7 +50,7 @@ public class Main {
                         .post(formBody)
                         .build();
                 try {
-                    okHttpClient.newCall(loginRequest).execute();
+                    okHttpClient.newCall(loginRequest).execute().close();
                     isLogin = true;
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -68,6 +68,7 @@ public class Main {
                 try {
                     Response response = okHttpClient.newCall(signRequest).execute();
                     JSONObject jo = JSON.parseObject(Objects.requireNonNull(response.body()).string());
+                    response.close();
                     if (!jo.getBoolean("error")) {
                         isSign = true;
                         new SendCloud("oTWTK0iicgxIg-r-wq6BF-Z2_x3I", "c8f57412c7c6ee4104710702cf3e2ccd")
