@@ -34,7 +34,9 @@ public class Main {
                         .url("https://wx.app.nbpt.edu.cn/yqtb/weixin/yqtb/")
                         .build();
                 try {
-                    phpSessionId = Objects.requireNonNull(okHttpClient.newCall(getCookieRequest).execute().header("Set-Cookie")).split(";")[0];
+                    Response response = okHttpClient.newCall(getCookieRequest).execute();
+                    phpSessionId = Objects.requireNonNull(response.header("Set-Cookie")).split(";")[0];
+                    response.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -83,9 +85,8 @@ public class Main {
                     e.printStackTrace();
                 }
             }
-
             try {
-                Thread.sleep(100);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
